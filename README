@@ -27,6 +27,9 @@ To build and launch DJANGOH :
 	make lhaglue.o
 	make djangoh
 
+To launch DJANGOH in repertory :
+	./djangoh < inputfile.in
+
 To build and launch the analysis program delivering the distributions
 of the main physical variables :
 	make pdist

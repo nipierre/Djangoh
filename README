@@ -1,0 +1,76 @@
+DJANGOH Usage Instructions
+**************************
+
+Website
+=======
+
+	http://wwwthep.physik.uni-mainz.de/~hspiesb/djangoh/djangoh.html
+
+
+Requirements
+============
+
+GCC > 4.4.7 with build-in GFORTRAN
+ROOT > 5.34/32
+LHAPDF 5.9.1
+CERNLIB (2006)
+
+(Tested on LXPLUS and CCAGE)
+
+
+Compilers and Options
+=====================
+
+Put in the Makefile the actual location of DJANGOH and LHAPDF.
+
+To build and launch DJANGOH : 
+	make djangoh
+
+To build and launch the analysis program delivering the distributions
+of the main physical variables :
+	make pdist
+
+To build and launch the analysis program delivering the multiplicity
+distributions of hadrons :
+	make mult
+	(make mult_d for the debug version)
+
+
+Inputs of DJANGOH
+=================
+
+An exemple of input file for DJANGOH is compass-nc-test.in.
+
+You can find the documentation and how to use the different options in
+this file on :
+	http://wwwthep.physik.uni-mainz.de/~hspiesb/djangoh/djangoh_m.4.6.6.ps.gz
+
+
+Launch DJANGOH
+==============
+
+To launch DJANGOH :
+	./djangohapp (in an other directory than the one w/ DJANGOH) 
+
+
+Outputs of DJANGOH and analysis program
+=======================================
+
+- DJANGOH
+	OUTFILENAME_out.dat contains the standard output.
+	OUTFILENAME_evt.dat contains the kinematic resume of the DIS event
+
+- pdist
+	pdist_p : hard photon \phi 
+	pdist_pq : struck quark \phi w/ and w/o Brehmsstrahlung
+	pdist_q : struck quark \theta w/ and w/o Brehmsstrahlung
+	pdist : hard photon energy
+	pmdist_E : hard photon, outgoing muon and struck quark energy
+	pmdist_t : hard photon and outgoing muon \theta
+	pQ2_lh : Q2had/Q2lep correlation
+	pt_q : struck quark pT
+
+- mult
+	hadron_mult : multiplicity of unidentified hadrons 
+	kaon_mult : multiplicity of kaons
+	pion_mult : multiplicity of pions

@@ -1,0 +1,55 @@
+OUTFILENAM
+compass-nc-test
+TITLE
+DJANGOH 4.6.10 for COMPASS for LH2, NLO at 160, Wmin=5
+EL-BEAM
+            160.0D0    0.0D0    3
+IOUNITS
+            1 1 1
+PR-BEAM
+            0.0D0   0.0D0
+GSW-PARAM
+            2 1 3 1 0 0 2 1 1 1 1
+KINEM-CUTS
+            3   0.004D0  0.4D0  0.1D0  0.7D0  1.0D0  1.0D4  1.4D0
+EGAM-MIN
+            0D0
+INT-OPT-NC
+            1 18 18 18 0  0 0 0 0
+INT-OPT-CC
+            0 0 0 0
+INT-ONLY
+            0
+INT-POINTS
+            30000
+SAM-OPT-NC
+            1 1 1 1 0  0 0 0 0
+SAM-OPT-CC
+            0 0 0 0
+NUCLEUS
+            0.0D0  1   1
+STRUCTFUNC
+            0  2  10150
+LHAPATH
+/sps/compass/npierre/lhapdf5/share/lhapdf/PDFsets
+FLONG
+            111  0.01  0.03
+ALFAS
+            1   1   0.20   0.235
+NFLAVORS
+            0   3
+RNDM-SEEDS
+            -1   -1
+START
+            1
+SOPHIA
+            1.5
+OUT-LEP
+            1
+FRAG
+            1
+CASCADES
+            12
+MAX-VIRT
+            5
+CONTINUE

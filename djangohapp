@@ -1,0 +1,23 @@
+#! /usr/local/bin/bash
+
+CURRENTDIR=$(pwd)
+DJANGOH=/sps/compass/npierre/djangoh
+
+if [ $CURRENTDIR = $DJANGOH ]; then
+echo '*** You cannot launch DJANGOH in this directory ***'
+echo '*** Please launch djangohapp from another directory ***'
+exit 1
+fi;
+
+UNIQMD5=$(date | md5sum | awk '{print $1}')
+echo ${USER}_${UNIQMD5}
+mkdir /tmp/${USER}_${UNIQMD5}
+
+cd /tmp/${USER}_${UNIQMD5}
+if [ -a compass-nc-test_out.dat ]; then rm -rf compass-nc-test_*; fi;
+if [ -a luevents.dat ]; then rm -rf luevents.dat; fi;
+$DJANGOH/djangoh < $DJANGOH/compass-nc-test.in
+
+cp * $CURRENTDIR
+
+cd - 

@@ -24,6 +24,7 @@ Compilers and Options
 Put in the Makefile the actual location of DJANGOH and LHAPDF.
 
 To build and launch DJANGOH : 
+	make lhaglue.o
 	make djangoh
 
 To build and launch the analysis program delivering the distributions
